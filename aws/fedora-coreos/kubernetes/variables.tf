@@ -160,8 +160,3 @@ variable "cluster_domain_suffix" {
   description = "Queries for domains with the suffix will be answered by CoreDNS. Default is cluster.local (e.g. foo.default.svc.cluster.local)"
   default     = "cluster.local"
 }
-
-// usage az-zone-match = ["*az1"]
-variable "az-zone-match" {
-  default = ["*"]
-}
