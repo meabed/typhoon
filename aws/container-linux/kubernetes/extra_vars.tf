@@ -10,12 +10,3 @@ variable "subnet_size" {
 variable "nlb_eip_id" {
   default = null
 }
-
-//output "controller_security_groups" {
-//  value       = [aws_security_group.controller.id]
-//  description = "List of worker security group IDs"
-//}
-//
-//output "controller_instance_id" {
-//  value = aws_instance.controllers.*.id
-//}
