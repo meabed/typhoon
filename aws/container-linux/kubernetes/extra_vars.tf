@@ -6,7 +6,3 @@ variable "az-zone-match" {
 variable "subnet_size" {
   default = 2
 }
-
-variable "nlb_eip_id" {
-  default = null
-}
