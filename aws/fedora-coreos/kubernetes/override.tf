@@ -1,4 +1,3 @@
-// usage az-zone-match = ["*az1"]
 variable "az-zone-match" {
   default = ["eu-west-1a"]
 }
@@ -23,11 +22,5 @@ resource "aws_subnet" "public" {
 
 # Network Load Balancer for apiservers and ingress
 resource "aws_lb" "nlb" {
-  subnets = null
-  subnet_mapping {
-    subnet_id = aws_subnet.public.0.id
-    allocation_id = var.nlb_eip_id[0]
-  }
-//  subnets = [aws_subnet.public.0.id]
+  subnets = [aws_subnet.public.0.id]
 }
-

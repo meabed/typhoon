@@ -1,4 +1,3 @@
-// usage az-zone-match = ["*az1"]
 variable "az-zone-match" {
   default = ["eu-west-1a"]
 }
@@ -19,4 +18,9 @@ resource "aws_subnet" "public" {
   count = var.subnet_size
   availability_zone = data.aws_availability_zones.all.names[0]
   cidr_block        = cidrsubnet(var.host_cidr, 2, count.index)
+}
+
+# Network Load Balancer for apiservers and ingress
+resource "aws_lb" "nlb" {
+  subnets = [aws_subnet.public.0.id]
 }
