@@ -24,3 +24,7 @@ resource "aws_subnet" "public" {
 resource "aws_lb" "nlb" {
   subnets = [aws_subnet.public.0.id]
 }
+
+resource "aws_route_table_association" "public" {
+  count = var.subnet_size
+}
