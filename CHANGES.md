@@ -11,17 +11,23 @@ Notable changes between versions.
   * Update CNI plugins and fix CVEs with Flannel (non-default)
   * Transition to a poseidon maintained container image
 
+### AWS
+
+* Allow `terraform-provider-aws` v3.0+ ([#803](https://github.com/poseidon/typhoon/pull/803))
+  * Recommend updating `terraform-provider-aws` to v3.0+
+  * Continue to allow v2.23+, no v3.x specific features are used
+
 ### Fedora CoreOS
 
 * Fix support for Flannel with Fedora CoreOS ([#795](https://github.com/poseidon/typhoon/pull/795))
-  * Fedora CoreOS fixes to align network interface defaults altered MAC address assignment for
-  the `flannel.1` interface in a way that caused flannel to drop pod-to-pod traffic
-  * Configure flannel interfaces explicitly
+  * Configure `flannel.1` link to select its own MAC address to solve flannel
+  pod-to-pod traffic drops starting with default link changes in Fedora CoreOS
+  32.20200629.3.0 ([details](https://github.com/coreos/fedora-coreos-tracker/issues/574#issuecomment-665487296))
 
 #### Addons
 
 * Update Prometheus from v2.19.2 to [v2.20.0](https://github.com/prometheus/prometheus/releases/tag/v2.20.0)
-* Update Grafana from v7.0.6 to [v7.1.1](https://github.com/grafana/grafana/releases/tag/v7.1.1)
+* Update Grafana from v7.0.6 to [v7.1.3](https://github.com/grafana/grafana/releases/tag/v7.1.3)
 
 ## v1.18.6
 
