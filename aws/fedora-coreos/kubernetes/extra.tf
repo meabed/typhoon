@@ -21,3 +21,9 @@ output "aws_eip_nlp_public_ip" {
 output "aws_eip_nlp_private_ip" {
   value = aws_eip.nlp_eip.private_ip
 }
+
+output "aws_route_tables_ids" {
+  value = [
+    aws_route_table.default.id
+  ]
+}
