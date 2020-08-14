@@ -10,7 +10,6 @@ variable "subnet_size" {
 // extra resources
 resource "aws_eip" "nlp_eip" {
   vpc = true
-  associate_with_private_ip = cidrhost(aws_subnet.public.0.cidr_block, 1)
 }
 
 // outputs
@@ -19,7 +18,8 @@ output "aws_eip_nlp_public_ip" {
 }
 
 output "aws_eip_nlp_private_ip" {
-  value = [cidrhost(aws_subnet.public.0.cidr_block, 1)]
+  value = [aws_eip.nlp_eip.private_ip]
+  depends_on = [aws_eip.nlp_eip]
 }
 
 output "aws_route_tables_ids" {
