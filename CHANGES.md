@@ -4,17 +4,22 @@ Notable changes between versions.
 
 ## Latest
 
+## v1.19.0
+
 * Kubernetes [v1.19.0](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.19.md#v1190)
 * Update etcd from v3.4.10 to [v3.4.12](https://github.com/etcd-io/etcd/releases/tag/v3.4.12)
 * Update Calico from v3.15.1 to [v3.15.2](https://docs.projectcalico.org/v3.15/release-notes/)
 
 ### Fedora CoreOS
 
-* Fix SELinux label of bootstrap-secrets on non-bootstrapping controllers ([#808](https://github.com/poseidon/typhoon/pull/808))
+* Fix race condition during bootstrap of multi-controller clusters ([#808](https://github.com/poseidon/typhoon/pull/808))
+  * Fix SELinux label of bootstrap-secrets on non-bootstrap controllers
 
 ### Addons
 
 * Introduce [fleetlock](https://github.com/poseidon/fleetlock) for Fedora CoreOS reboot coordination ([#814](https://github.com/poseidon/typhoon/pull/814))
+* Update nginx-ingress from v0.34.1 to [v0.35.0](https://github.com/kubernetes/ingress-nginx/releases/tag/controller-v0.35.0)
+  * Repository changed to `k8s.gcr.io/ingress-nginx/controller`
 * Update Grafana from v7.1.3 to [v7.1.5](https://github.com/grafana/grafana/releases/tag/v7.1.5)
 
 ## v1.18.8
