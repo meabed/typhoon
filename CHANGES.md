@@ -4,6 +4,8 @@ Notable changes between versions.
 
 ## Latest
 
+* Update Cilium from v1.8.3 to [v1.8.4](https://github.com/cilium/cilium/releases/tag/v1.8.4)
+
 ### Flatcar Linux
 
 * Remove references to CoreOS Container Linux ([#839](https://github.com/poseidon/typhoon/pull/839))
@@ -11,6 +13,7 @@ Notable changes between versions.
 
 ### Addons
 
+* Update nginx-ingress from v0.35.0 to [v0.40.0](https://github.com/kubernetes/ingress-nginx/releases/tag/controller-v0.40.0)
 * Update Grafana from v7.1.5 to [v7.2.0](https://github.com/grafana/grafana/releases/tag/v7.2.0)
 
 ## v1.19.2
