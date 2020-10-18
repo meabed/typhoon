@@ -4,7 +4,12 @@ Notable changes between versions.
 
 ## Latest
 
+* Remove `asset_dir` variable (default off in [v1.17.0](https://github.com/poseidon/typhoon/pull/595), deprecated in [v1.18.0](https://github.com/poseidon/typhoon/pull/678))
+
+## v1.19.3
+
 * Update Cilium from v1.8.3 to [v1.8.4](https://github.com/cilium/cilium/releases/tag/v1.8.4)
+* Update Calico from v1.15.3 to [v1.16.3](https://github.com/projectcalico/calico/releases/tag/v3.16.3) ([#851](https://github.com/poseidon/typhoon/pull/851))
 * Update flannel from v0.13.0-rc2 to v0.13.0 ([#219](https://github.com/poseidon/terraform-render-bootstrap/pull/219))
 
 ### Flatcar Linux
@@ -16,7 +21,8 @@ Notable changes between versions.
 
 * Update nginx-ingress from v0.35.0 to [v0.40.2](https://github.com/kubernetes/ingress-nginx/releases/tag/controller-v0.40.2)
 * Update Grafana from v7.1.5 to [v7.2.1](https://github.com/grafana/grafana/releases/tag/v7.2.1)
-* Update kube-state-metrics from v1.9.7 to [v2.0.0-alpha.1](https://github.com/kubernetes/kube-state-metrics/releases/tag/v2.0.0-alpha.1)
+* Update Prometheus from v2.21.0 to [v2.22.0](https://github.com/prometheus/prometheus/releases/tag/v2.22.0)
+  * Update kube-state-metrics from v1.9.7 to [v2.0.0-alpha.1](https://github.com/kubernetes/kube-state-metrics/releases/tag/v2.0.0-alpha.1)
 
 ## v1.19.2
 
