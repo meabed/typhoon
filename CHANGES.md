@@ -10,6 +10,8 @@ Notable changes between versions.
 
 ### Fedora CoreOS
 
+* Improve `etcd-member.service` systemd unit ([#868](https://github.com/poseidon/typhoon/pull/868))
+  * Allow a snippet with a systemd dropin to set an alternate image (e.g. mirror)
 * Fix local node delete oneshot on node shutdown ([#856](https://github.com/poseidon/typhoon/pull/855))
 
 ### Flatcar Linux
@@ -23,8 +25,10 @@ Notable changes between versions.
 
 ### Addons
 
+* Update nginx-ingress from v0.40.2 to [v0.41.0](https://github.com/kubernetes/ingress-nginx/releases/tag/controller-v0.41.0)
+* Update Prometheus from v2.22.0 to [v2.22.1](https://github.com/prometheus/prometheus/releases/tag/v2.22.1)
 * Update kube-state-metrics from v2.0.0-alpha.1 to [v2.0.0-alpha.2](https://github.com/kubernetes/kube-state-metrics/releases/tag/v2.0.0-alpha.2)
-* Update Grafana from v7.2.1 to [v7.3.0](https://github.com/grafana/grafana/releases/tag/v7.3.0)
+* Update Grafana from v7.2.1 to [v7.3.1](https://github.com/grafana/grafana/releases/tag/v7.3.1)
 
 ## v1.19.3
 
