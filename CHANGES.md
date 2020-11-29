@@ -7,6 +7,9 @@ Notable changes between versions.
 * Add input variable validations ([#880](https://github.com/poseidon/typhoon/pull/880))
   * Require Terraform v0.13+ ([migration guide](https://typhoon.psdn.io/topics/maintenance/#terraform-versions))
 * Set output sensitive to suppress console display for some cases ([#885](https://github.com/poseidon/typhoon/pull/885))
+* Update Calico from v3.16.5 to v3.17.0 ([#890](https://github.com/poseidon/typhoon/pull/890))
+  * Enable Calico MTU auto-detection
+  * Remove [workaround](https://github.com/poseidon/typhoon/pull/724) to Calico cni-plugin [issue](https://github.com/projectcalico/cni-plugin/issues/874)
 
 ### AWS
 
@@ -15,10 +18,22 @@ Notable changes between versions.
   * NLB DNS name has both A and AAAA records
   * NLB to target node traffic is IPv4 (no change)
 
+### Fedora CoreOS
+
+#### AWS
+
+* Fix AMI query for which could fail in some regions ([#887](https://github.com/poseidon/typhoon/pull/887))
+
+#### Bare-Metal
+
+* Use initramfs and rootfs images as initrd's ([#889](https://github.com/poseidon/typhoon/pull/889))
+  * Requires Fedora CoreOS version with rootfs images (e.g. 32.20200923.3.0+)
+
 ### Addons
 
-* Update Prometheus from v2.22.1 to [v2.22.2](https://github.com/prometheus/prometheus/releases/tag/v2.22.2)
-* Update Grafana from v7.3.2 to [v7.3.3](https://github.com/grafana/grafana/releases/tag/v7.3.3)
+* Update Prometheus from v2.22.2 to [v2.23.0-rc.0](https://github.com/prometheus/prometheus/releases/tag/v2.23.0-rc.0)
+* Update kube-state-metrics from v2.0.0-alpha.2 to [v2.0.0-alpha.3](https://github.com/kubernetes/kube-state-metrics/releases/tag/v2.0.0-alpha.3)
+* Update Grafana from v7.3.2 to [v7.3.4](https://github.com/grafana/grafana/releases/tag/v7.3.4)
 
 ## v1.19.4
 
