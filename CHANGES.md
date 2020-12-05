@@ -4,13 +4,17 @@ Notable changes between versions.
 
 ## Latest
 
+* Kubernetes [v1.20.0-rc.0](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.20.md#v1200-rc0)
 * Add input variable validations ([#880](https://github.com/poseidon/typhoon/pull/880))
   * Require Terraform v0.13+ ([migration guide](https://typhoon.psdn.io/topics/maintenance/#terraform-versions))
 * Set output sensitive to suppress console display for some cases ([#885](https://github.com/poseidon/typhoon/pull/885))
+* Add service account token [volume projection](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#service-account-token-volume-projection) ([#897](https://github.com/poseidon/typhoon/pull/897))
+* Scope kube-scheduler and kube-controller-manager permissions ([#898](https://github.com/poseidon/typhoon/pull/898))
 * Update etcd from v3.4.12 to [v3.4.14](https://github.com/etcd-io/etcd/releases/tag/v3.4.14)
 * Update Calico from v3.16.5 to v3.17.0 ([#890](https://github.com/poseidon/typhoon/pull/890))
   * Enable Calico MTU auto-detection
   * Remove [workaround](https://github.com/poseidon/typhoon/pull/724) to Calico cni-plugin [issue](https://github.com/projectcalico/cni-plugin/issues/874)
+* Update Cilium from v1.9.0 to [v1.9.1](https://github.com/cilium/cilium/releases/tag/v1.9.1)
 * Relax `terraform-provider-ct` version constraint to v0.6+ ([#893](https://github.com/poseidon/typhoon/pull/893))
   * Allow upgrading `terraform-provider-ct` to v0.7.x ([warn](https://typhoon.psdn.io/topics/maintenance/#upgrade-terraform-provider-ct))
 
@@ -29,6 +33,7 @@ Notable changes between versions.
 
 #### Bare-Metal
 
+* Promote Fedora CoreOS to stable
 * Use initramfs and rootfs images as initrd's ([#889](https://github.com/poseidon/typhoon/pull/889))
   * Requires Fedora CoreOS version with rootfs images (e.g. 32.20200923.3.0+)
 
@@ -63,7 +68,6 @@ Notable changes between versions.
 ### Flatcar Linux
 
 * Rename `container-linux` modules to `flatcar-linux` ([#858](https://github.com/poseidon/typhoon/issues/858)) (**action required**)
-
 * Change on-host system containers from rkt to docker
   * Change `etcd-member.service` container runnner from rkt to docker ([#867](https://github.com/poseidon/typhoon/pull/867))
   * Change `kubelet.service` container runner from rkt-fly to docker ([#855](https://github.com/poseidon/typhoon/pull/855))
