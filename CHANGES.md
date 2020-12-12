@@ -7,12 +7,11 @@ Notable changes between versions.
 * Kubernetes [v1.20.0](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.20.md#v1200)
 * Add input variable validations ([#880](https://github.com/poseidon/typhoon/pull/880))
   * Require Terraform v0.13+ ([migration guide](https://typhoon.psdn.io/topics/maintenance/#terraform-versions))
-* Support Terraform v0.13.x and v0.14.x ([#905](https://github.com/poseidon/typhoon/pull/905))
 * Set output sensitive to suppress console display for some cases ([#885](https://github.com/poseidon/typhoon/pull/885))
 * Add service account token [volume projection](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/#service-account-token-volume-projection) ([#897](https://github.com/poseidon/typhoon/pull/897))
 * Scope kube-scheduler and kube-controller-manager permissions ([#898](https://github.com/poseidon/typhoon/pull/898))
 * Update etcd from v3.4.12 to [v3.4.14](https://github.com/etcd-io/etcd/releases/tag/v3.4.14)
-* Update Calico from v3.16.5 to v3.17.0 ([#890](https://github.com/poseidon/typhoon/pull/890))
+* Update Calico from v3.16.5 to v3.17.1 ([#890](https://github.com/poseidon/typhoon/pull/890))
   * Enable Calico MTU auto-detection
   * Remove [workaround](https://github.com/poseidon/typhoon/pull/724) to Calico cni-plugin [issue](https://github.com/projectcalico/cni-plugin/issues/874)
 * Update Cilium from v1.9.0 to [v1.9.1](https://github.com/cilium/cilium/releases/tag/v1.9.1)
@@ -42,7 +41,7 @@ Notable changes between versions.
 
 * Update Prometheus from v2.22.2 to [v2.23.0](https://github.com/prometheus/prometheus/releases/tag/v2.23.0)
 * Update kube-state-metrics from v2.0.0-alpha.2 to [v2.0.0-alpha.3](https://github.com/kubernetes/kube-state-metrics/releases/tag/v2.0.0-alpha.3)
-* Update Grafana from v7.3.2 to [v7.3.4](https://github.com/grafana/grafana/releases/tag/v7.3.4)
+* Update Grafana from v7.3.2 to [v7.3.5](https://github.com/grafana/grafana/releases/tag/v7.3.5)
 
 ## v1.19.4
 
