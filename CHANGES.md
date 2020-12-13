@@ -2,7 +2,7 @@
 
 Notable changes between versions.
 
-## Latest
+## v1.20.0
 
 * Kubernetes [v1.20.0](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.20.md#v1200)
 * Add input variable validations ([#880](https://github.com/poseidon/typhoon/pull/880))
@@ -24,6 +24,10 @@ Notable changes between versions.
   * NLB subnets assigned both IPv4 and IPv6 addresses
   * NLB DNS name has both A and AAAA records
   * NLB to target node traffic is IPv4 (no change)
+
+### Bare-Metal
+
+* Remove iSCSI `/etc/iscsi` and `iscsadm` mounts from Kubelet ([#912](https://github.com/poseidon/typhoon/pull/912))
 
 ### Fedora CoreOS
 
