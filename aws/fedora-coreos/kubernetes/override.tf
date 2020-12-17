@@ -1,3 +1,7 @@
+terraform {
+  required_version = ">= 0.13.0"
+}
+
 variable "az-zone-match" {
   default = ["eu-west-1a"]
 }
