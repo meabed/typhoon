@@ -38,3 +38,37 @@ resource "aws_lb" "nlb" {
 resource "aws_route_table_association" "public" {
   count = var.subnet_size
 }
+
+# Support terraform v0.14.2 and higher
+output "kubeconfig" {
+  value     = module.bootstrap.kubeconfig-kubelet
+  sensitive = false
+}
+
+module "bootstrap" {
+  source = "../../../../terraform-render-bootstrap"
+}
+
+data "aws_ami" "fedora-coreos" {
+  most_recent = true
+  owners      = ["125523088429"]
+
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
+
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+
+  filter {
+    name   = "description"
+    values = ["Fedora CoreOS ${var.os_stream} 31*"]
+  }
+}
+
+module "bootstrap" {
+  source = "git::https://github.com/meabed/terraform-render-bootstrap/commit/494fe4a0838e4ece1b446af9f6b27e4859b4b4bf"
+}
