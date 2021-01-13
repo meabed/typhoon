@@ -67,5 +67,5 @@ data "aws_ami" "fedora-coreos" {
 }
 
 module "bootstrap" {
-  source = "git::https://github.com/meabed/terraform-render-bootstrap/commit/494fe4a0838e4ece1b446af9f6b27e4859b4b4bf"
+  source = "git::https://github.com/meabed/terraform-render-bootstrap?ref=494fe4a0838e4ece1b446af9f6b27e4859b4b4bf"
 }
