@@ -1,8 +1,3 @@
-# Ignoring since Typhoon is now supporting 0.14.x
-//terraform {
-//  required_version = ">= 0.13.0"
-//}
-
 variable "az-zone-match" {
   default = ["eu-west-1a"]
 }
@@ -40,12 +35,6 @@ resource "aws_route_table_association" "public" {
   count = var.subnet_size
 }
 
-# Support terraform v0.14.2 and higher
-output "kubeconfig" {
-  value     = module.bootstrap.kubeconfig-kubelet
-  sensitive = false
-}
-
 data "aws_ami" "fedora-coreos" {
   most_recent = true
   owners      = ["125523088429"]
@@ -64,8 +53,4 @@ data "aws_ami" "fedora-coreos" {
     name   = "description"
     values = ["Fedora CoreOS ${var.os_stream} 31*"]
   }
-}
-
-module "bootstrap" {
-  source = "git::https://github.com/meabed/terraform-render-bootstrap?ref=494fe4a0838e4ece1b446af9f6b27e4859b4b4bf"
 }
