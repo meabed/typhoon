@@ -4,6 +4,8 @@ Notable changes between versions.
 
 ## Latest
 
+* Update etcd from v3.4.14 to [v3.4.15](https://github.com/etcd-io/etcd/releases/tag/v3.4.15)
+
 ### Flatcar Linux
 
 #### AWS
@@ -17,6 +19,12 @@ Notable changes between versions.
 #### Bare-Metal
 
 * Remove `os_channel` option `flatcar-edge` ([#943](https://github.com/poseidon/typhoon/pull/943))
+
+### Addons
+
+* Update kube-state-metrics from v2.0.0-alpha.3 to [v2.0.0-rc.0](https://github.com/kubernetes/kube-state-metrics/releases/tag/v2.0.0-rc.0)
+* Update node-exporter from v1.1.1 to [v1.1.2](https://github.com/prometheus/node_exporter/releases/tag/v1.1.2)
+* Update Grafana from v7.4.2 to [v7.4.3](https://github.com/grafana/grafana/releases/tag/v7.4.3)
 
 ## v1.20.4
 
