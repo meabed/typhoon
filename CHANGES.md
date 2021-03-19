@@ -4,7 +4,11 @@ Notable changes between versions.
 
 ## Latest
 
+* Kubernetes [v1.20.5](https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG/CHANGELOG-1.20.md#v1205)
 * Update etcd from v3.4.14 to [v3.4.15](https://github.com/etcd-io/etcd/releases/tag/v3.4.15)
+* Update Cilium from v1.9.4 to [v1.9.5](https://github.com/cilium/cilium/releases/tag/v1.9.5)
+* Update Calico from v3.17.3 to [v3.18.1](https://github.com/projectcalico/calico/releases/tag/v3.18.1)
+* Mark bootstrap token as sensitive in Terraform plans ([#949](https://github.com/poseidon/typhoon/pull/949))
 
 ### Flatcar Linux
 
@@ -22,9 +26,11 @@ Notable changes between versions.
 
 ### Addons
 
+* Update Prometheus from v2.25.0 to [v2.25.2](https://github.com/prometheus/prometheus/releases/tag/v2.25.2)
 * Update kube-state-metrics from v2.0.0-alpha.3 to [v2.0.0-rc.0](https://github.com/kubernetes/kube-state-metrics/releases/tag/v2.0.0-rc.0)
+  * Switch image from `quay.io` to `k8s.gcr.io` ([#946](https://github.com/poseidon/typhoon/pull/946))
 * Update node-exporter from v1.1.1 to [v1.1.2](https://github.com/prometheus/node_exporter/releases/tag/v1.1.2)
-* Update Grafana from v7.4.2 to [v7.4.3](https://github.com/grafana/grafana/releases/tag/v7.4.3)
+* Update Grafana from v7.4.2 to [v7.4.5](https://github.com/grafana/grafana/releases/tag/v7.4.5)
 
 ## v1.20.4
 
